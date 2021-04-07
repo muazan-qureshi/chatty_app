@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2021 at 07:28 PM
+-- Generation Time: Apr 07, 2021 at 02:35 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -45,7 +45,9 @@ INSERT INTO `post` (`pid`, `ppost`, `ppostBY`, `ppostDT`) VALUES
 (4, 'This is ali from karachi and fdorm adnsi s', 3, '2021-03-27 17:31:49'),
 (5, 'lorem ipsum dolor sit amit constectur amit', 3, '2021-03-27 17:32:16'),
 (6, 'Hello WOrld\r\n', 3, '2021-03-27 17:32:25'),
-(7, 'Lets get started with this small chatty app', 3, '2021-03-27 17:32:49');
+(7, 'Lets get started with this small chatty app', 3, '2021-03-27 17:32:49'),
+(8, 'asdasdasdasd a sjdmsad mn uasdgiqw ashdgusdmm masjduwiqgkdn ', 1, '2021-03-29 13:01:25'),
+(9, 'hello world\r\n', 1, '2021-04-07 12:33:55');
 
 -- --------------------------------------------------------
 
@@ -93,7 +95,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`

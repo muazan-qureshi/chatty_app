@@ -55,13 +55,23 @@ class chatty_app
                 echo "<script>alert('Posted Successfully')</script>";
             }
         }
-    }// function end here
+    } // function end here
 
 
     // fucntion to get all post on home page as a timeline clone to facebook
     function timelinepost()
     {
-        $sql = "SELECT p.pid as postid, p.ppost as content, p.ppostBY , p.ppostDT,u.id, u.name as postby, u.email FROM post p INNER JOIN users u ON u.id = p.ppostBY";
+        $sql = "SELECT p.pid as postid, p.ppost as content, p.ppostBY , p.ppostDT,u.id, u.name as postby, u.email FROM post p INNER JOIN users u ON u.id = p.ppostBY ORDER by Rand()";
+        $query = mysqli_query($this->conn(), $sql);
+        return $query;
+    }
+
+    //function for post details
+    function post_detail()
+    {
+        $a = $_GET['postid'];
+        // echo $a;
+        $sql = "SELECT p.pid as postid, p.ppost as content, p.ppostBY , p.ppostDT,u.id, u.name as postby, u.email FROM post p INNER JOIN users u ON u.id = p.ppostBY WHERE p.pid = '$a'";
         $query = mysqli_query($this->conn(), $sql);
         return $query;
     }
